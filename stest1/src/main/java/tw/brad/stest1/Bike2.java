@@ -2,7 +2,7 @@ package tw.brad.stest1;
 
 import org.springframework.stereotype.Component;
 
-// @Component
+@Component
 public class Bike2 implements Bike {
 	private int i;
 	public Bike2() {
