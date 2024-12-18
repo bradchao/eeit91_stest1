@@ -1,5 +1,7 @@
 package tw.brad.stest1;
 
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +17,17 @@ public class Brad04 {
 		int r = x + y;
 		
 		return String.format("%d + %d = %d", x, y, r);
+	}
+	
+	@RequestMapping("/m2")
+	public void m2(@RequestBody User user) {
+		System.out.println(user.getName() + ":" + user.getAge());
+	}
+	
+	@RequestMapping("/m3/{name}/{id}")
+	public void m3(@PathVariable Integer id, @PathVariable String name) {
+		System.out.printf("name = %s\n", name);
+		System.out.printf("id = %d", id);
 	}
 	
 }
