@@ -24,6 +24,10 @@ public class Brad02 {
 	public String brad021() {
 		bike1.upSpeed();
 		bike2.upSpeed();
+		
+		GabBike bike11 = (GabBike)bike1;
+		System.out.println(bike11.getSpeed());
+		
 		return null;
 	}
 	

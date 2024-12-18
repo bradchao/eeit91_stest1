@@ -16,4 +16,9 @@ public class GabBike implements Bike{
 	public void downSpeed() {
 		System.out.println("GBike:downSpeed()");
 	}
+	
+	public double getSpeed() {
+		return 1.2;
+	}
+	
 }
