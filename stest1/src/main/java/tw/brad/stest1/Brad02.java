@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class Brad02 {
 
 	@Autowired
-	private Bike bike1;
+	private Bike brad1;
 	
 	@Autowired
-	private Bike bike2;
+	private Bike brad2;
 	
 	public Brad02() {
 		System.out.println("Brad02()");
@@ -19,8 +19,8 @@ public class Brad02 {
 	
 	@RequestMapping("/brad021")
 	public String brad021() {
-		bike1.upSpeed();
-		bike2.upSpeed();
+		brad1.upSpeed();
+		brad2.upSpeed();
 		return null;
 	}
 	
