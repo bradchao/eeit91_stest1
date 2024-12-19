@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+
 /*
  * RESTful
  * POST : Create
@@ -27,7 +31,7 @@ public class Brad041 {
 	}
 	
 	@GetMapping("/user/{id}")
-	public void m2(@PathVariable Integer id) {
+	public void m2(@PathVariable @Min(10) @Max(20) Integer id) {
 		System.out.println("m2:" + id);
 	}
 	
@@ -37,7 +41,7 @@ public class Brad041 {
 	}
 	
 	@PostMapping("/user")
-	public void m4(@RequestBody User user) {
+	public void m4(@RequestBody @Valid User user) {
 		System.out.println("m4: " + user.getName());
 	}
 
